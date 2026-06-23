@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply m-0 p-0 box-border;
+}
+
+html {
+  @apply scroll-smooth;
+}
+
+body {
+  @apply bg-dark-bg text-white min-h-screen;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Glassmorphism effect */
+.glass {
+  @apply bg-dark-card backdrop-blur-md border border-white/10 rounded-2xl;
+}
+
+.glass-hover {
+  @apply glass hover:bg-dark-card/80 hover:border-neon-cyan/30 transition-all duration-300;
+}
+
+/* Neon glow effects */
+.glow-cyan {
+  @apply shadow-glow-cyan;
+}
+
+.glow-emerald {
+  @apply shadow-glow-emerald;
+}
+
+/* Gradient text */
+.gradient-text {
+  @apply bg-gradient-neon bg-clip-text text-transparent;
+}
+
+/* Smooth transitions */
+.transition-smooth {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-dark-bg;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-neon-cyan/30 rounded-full hover:bg-neon-cyan/50;
+}
